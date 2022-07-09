@@ -10,9 +10,16 @@ Turbo Rails and Hotwire from [Turbo Rails Tutorial](https://www.hotrails.dev/tur
 
 ## Setup
 ### Install dependencies
-Install the gems, the JavaScript dependencies, create, migrate and seed the database
+1. [ ] Make sure `yarn` is installed
+2. Install the gems, the JavaScript dependencies, create, migrate and seed the database
 ```shell
 bin/setup
+```
+3. Additional steps required (at least on macOS Monterrey running as x86)
+```shell
+bin/rails css:install:sass
+yarn add @hotwired/turbo-rails
+bin/rails javascript:install:esbuild
 ```
 
 ### Run the rails server, and the scripts that precompile the CSS and the JavaScript code
@@ -27,6 +34,18 @@ When running the bin/dev command, we are running three commands at once:
 web: bin/rails server -p 3000
 js: yarn build --watch
 css: yarn build:css --watch
+```
+
+## Testing
+### Create tests
+For a `quotes` (CRUD) resource
+```shell
+bin/rails g system_test quotes
+```
+
+### Run tests
+```shell
+bin/rails test:system
 ```
 
 ## Project creation
