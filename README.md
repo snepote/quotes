@@ -10,7 +10,7 @@ Turbo Rails and Hotwire from [Turbo Rails Tutorial](https://www.hotrails.dev/tur
 
 ## Setup
 ### Install dependencies
-1. [ ] Make sure `yarn` is installed
+1. Make sure `yarn` is installed
 2. Install the gems, the JavaScript dependencies, create, migrate and seed the database
 ```shell
 bin/setup
