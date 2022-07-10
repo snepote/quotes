@@ -1,7 +1,7 @@
 language: ruby
 cache: bundler
 
-bundler_args: config set --local without 'production'
+bundler_args: --without production
 
 services:
   - postgresql
