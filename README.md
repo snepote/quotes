@@ -2,6 +2,8 @@
 
 Turbo Rails and Hotwire from [Turbo Rails Tutorial](https://www.hotrails.dev/turbo-rails)
 
+[![Build Status](https://app.travis-ci.com/snepote/quotes.svg?branch=main)](https://app.travis-ci.com/snepote/quotes)
+
 |  Dependency | Version |
 | ----------- | ------- |
 | Ruby        | 3.0.4   |
