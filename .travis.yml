@@ -1,0 +1,24 @@
+language: ruby
+cache: bundler
+
+bundler_args: --without production
+
+before_script:
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
+  - bin/setup
+
+script:
+  - bin/rails test:system
+
+after_script:
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
+
+# safelist
+branches:
+  only:
+  - main
+
+notifications:
+  email: "snepote@gmail.com"
