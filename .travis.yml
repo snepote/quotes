@@ -12,8 +12,7 @@ services:
 
 before_script:
   - sudo apt update
-  - curl -sL https://deb.nodesource.com/setup_18.x -o /tmp/nodesource_setup.s
-  - sudo bash /tmp/nodesource_setup.sh
+  - curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
   - sudo apt install -y nodejs
   - node --version
   - npm --version
