@@ -11,8 +11,11 @@ services:
   - postgresql
 
 before_script:
+  - bin/rails javascript:install:esbuild
+  - bin/rails css:install:sass
   - cp config/database.travis.yml config/database.yml
   - psql -c 'create database travis_ci_test;' -U postgres
+
   - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.22.19
   - export PATH="$HOME/.yarn/bin:$PATH"  
   - bin/setup
