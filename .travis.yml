@@ -1,5 +1,7 @@
 language: ruby
-cache: bundler
+os: linux
+dist: xenial
+cache:
   bundler: true
   yarn: true
 
