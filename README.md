@@ -61,6 +61,14 @@ js: yarn build --watch
 css: yarn build:css --watch
 ```
 
+## Turbo Streams
+### Security
+#### Models
+Make sure to use the correct configuration in
+```ruby
+broadcasts_to
+```
+
 ## Testing
 ### Create tests
 For a `quotes` (CRUD) resource
