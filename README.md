@@ -80,8 +80,13 @@ bin/rails db:fixtures:load
 ```
 
 ### Run tests
+#### Feature tests
 ```shell
 bin/rails test:system
+```
+#### All tests
+```shell
+bin/rails test:all
 ```
 
 ## Project creation
