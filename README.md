@@ -79,6 +79,26 @@ Make sure to use the correct configuration in
 broadcasts_to
 ```
 
+## Stimulus
+### Create controller
+```shell
+bin/rails generate stimulus [CONTROLLER_NAME]
+```
+
+### Remove a controller
+```shell
+bin/rails destroy stimulus [CONTROLLER_NAME]
+```
+Note: please make sure that the corresponding lines are removed from `app/javascript/controllers/index.js`
+
+### Link JavaScript behavior defined in Stimulus Controllers to HTML
+Thanks to naming conventions on data attributes, use:
+```html
+<div data-controller="[CONTROLLER_NAME]" data-action="animationend->[CONTROLLER_NAME]#[METHOD]>
+</div>
+```
+Here I suppose `animationend` is the event trigger
+
 ## Testing
 ### Create tests
 For a `quotes` (CRUD) resource
