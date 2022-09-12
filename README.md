@@ -62,6 +62,16 @@ css: yarn build:css --watch
 ```
 
 ## Turbo Streams
+### Disable Turbo
+```javascript
+// app/javascript/application.js
+import "./controllers"
+
+// The two following lines disable Turbo on the whole application
+import { Turbo } from "@hotwired/turbo-rails"
+Turbo.session.drive = false
+```
+
 ### Security
 #### Models
 Make sure to use the correct configuration in
