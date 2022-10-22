@@ -5,7 +5,9 @@ en:
         name: Name of your quote
     labels:
       quote:
-        name: Name  
+        name: Name
+      line_item_date:
+        date: Date
     "yes": 'Yes'
     "no": 'No'
     required:
@@ -19,3 +21,6 @@ en:
       quote:
         create: Create quote
         update: Update quote
+      line_item_date:
+        create: Create date
+        update: Update date
