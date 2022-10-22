@@ -5,8 +5,6 @@ cache:
   bundler: true
   yarn: true
 
-bundler_args: --without production
-
 addons:
   postgresql: "12"
   apt:
