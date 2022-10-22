@@ -1,0 +1,136 @@
+require: 
+  - rubocop-rails
+  - rubocop-performance
+  - rubocop-rspec
+
+AllCops:
+  NewCops: enable
+  Exclude:
+  - Rakefile
+  - config.ru
+  - 'db/schema.rb'
+  - 'bin/*'
+  - 'node_modules/**/*'
+  - 'db/**/*'
+  - 'config/initializers/*'
+  - 'config/puma.rb'
+  - 'config/config.rb'
+  - 'config/application.rb'
+  - 'config/environment.rb'
+  - 'config/boot.rb'
+  - 'config/environments/*'
+  - 'config/spring.rb'
+  - 'lib/**/*'
+  - 'features/**/*'
+  # Required for semaphore:
+  - vendor/**/*.rb
+  - vendor/bundle/**/*
+  - gemfiles/vendor/bundle/**/*
+  # Following files will be progressively fixed:
+  # add some files to be temporary excluded here
+Layout/LineLength:
+  Max: 140
+  Enabled: true
+  Exclude:
+  - 'spec/**/*'
+
+Metrics/MethodLength:
+  Max: 25
+
+Style/Documentation:
+  Enabled: false
+
+Lint/MissingSuper:
+  Enabled: false
+
+Metrics/AbcSize:
+  Max: 30
+
+Metrics/BlockLength:
+  Max: 20
+  Enabled: true
+  Exclude:
+  - 'spec/**/*'
+
+Metrics/ClassLength:
+  Max: 180
+
+Metrics/CyclomaticComplexity:
+  Max: 15
+
+Metrics/PerceivedComplexity:
+  Max: 15
+
+Naming/VariableNumber:
+  Enabled: false
+
+RSpec/VerifiedDoubles:
+  Enabled: false
+
+RSpec/FilePath:
+  Enabled: false
+
+RSpec/LetSetup:
+  Enabled: false
+
+RSpec/ExampleLength:
+  Enabled: false
+
+RSpec/MessageSpies:
+  Enabled: false
+
+RSpec/ExpectInHook:
+  Enabled: false
+
+RSpec/NamedSubject:
+  Enabled: false
+
+RSpec/StubbedMock:
+  Enabled: false
+
+RSpec/MultipleExpectations:
+  Enabled: false
+
+RSpec/ContextWording:
+  Enabled: false
+
+RSpec/DescribeClass:
+  Exclude:
+    - spec/features/**/*
+
+RSpec/MultipleMemoizedHelpers:
+    Max: 20
+
+RSpec/NestedGroups:
+  Max: 5
+
+RSpec/AnyInstance:
+  Enabled: false
+
+Rails/SkipsModelValidations:
+  Exclude:
+    - 'spec/**/*'
+
+Rails/HasManyOrHasOneDependent:
+  Enabled: false
+
+Rails/OutputSafety:
+  Enabled: false
+
+Rails/HasAndBelongsToMany:
+  Enabled: false
+
+Rails/HelperInstanceVariable:
+  Enabled: false
+
+Metrics/ModuleLength:
+  Max: 150
+
+Metrics/ParameterLists:
+  Max: 8
+
+Rails/I18nLocaleTexts:
+  Enabled: false
+
+Rails/HttpPositionalArguments:
+  Enabled: false

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class QuotesController < ApplicationController
   before_action :set_quote, only: %i[show edit update destroy]
 
@@ -13,6 +15,8 @@ class QuotesController < ApplicationController
     @quote = Quote.new
   end
 
+  def edit; end
+
   def create
     # Only this first line changes to make sure the association is created
     @quote = current_company.quotes.build(quote_params)
@@ -26,8 +30,6 @@ class QuotesController < ApplicationController
       render :new, status: :unprocessable_entity
     end
   end
-
-  def edit; end
 
   def update
     if @quote.update(quote_params)

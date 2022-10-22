@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
@@ -54,6 +56,9 @@ gem 'devise', '~> 4.8.1'
 # gem "image_processing", "~> 1.2"
 
 gem 'rubocop', '~> 1.37'
+gem 'rubocop-performance'
+gem 'rubocop-rails'
+gem 'rubocop-rspec'
 
 gem 'simple_form', '~> 5.1.0'
 
